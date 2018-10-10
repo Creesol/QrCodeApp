@@ -2,35 +2,140 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-    <RelativeLayout
+    android:background="@drawable/backgroundimg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/relLayout"
-        >
+        android:layout_height="340dp"
+        android:orientation="vertical"
+        android:id="@+id/imageMain">
 
-        <Button
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+          android:src="@drawable/image"
+            android:layout_weight="0.6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+           android:layout_gravity="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#fafafa"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_weight="0.4"
+            android:text="Admin Panel"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/GetData"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
             android:layout_marginLeft="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnUpDirectory"
-            android:text="Back"/>
-
-        <Button
-            android:layout_marginRight="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnViewSDCard"
-            android:text="Memory"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
+            android:layout_weight="1"
+            android:onClick="Statistics"
 
 
-    <ListView
-        android:layout_below="@+id/relLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lvInternalStorage">
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/textView"
 
-    </ListView>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Statistics"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+
+                    android:textSize="21sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/statistics"/>
+
+            </LinearLayout>
+
+
+
+
+        </android.support.v7.widget.CardView>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+
+            android:layout_weight="0.2" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/SendData"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"
+            app:cardElevation="4dp"
+            android:onClick="CallRead"
+
+            android:layout_marginRight="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <TextView
+                    android:id="@+id/textView2"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Send Data"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+
+                    android:textSize="21sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/senddata"/>
+
+            </LinearLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
 </RelativeLayout>

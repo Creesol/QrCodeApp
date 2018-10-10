@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsMain"
+    android:background="@drawable/backgroundimg"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="57dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/GetDataByDate"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:onClick="DataByDate"
+            app:cardBackgroundColor="#60a665"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/databydate"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/textView3"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Data by Date"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:textColor="#f5f3f3"
+
+                    android:textStyle="bold"
+
+                    android:textSize="21sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+
+            android:layout_weight="0.2" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/SendData"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:onClick="graphs"
+
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/graphscoming"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/textView4"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Graphs coming"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:textColor="#f5f3f3"
+
+                    android:textStyle="bold"
+
+                    android:textSize="21sp" />
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginTop="82dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/TimesChecked"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:onClick="timesChecked"
+
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/numberoftimecheched"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/textView"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Times Checked"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:textColor="#f5f3f3"
+
+                    android:textStyle="bold"
+
+                    android:textSize="21sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+
+            android:layout_weight="0.2" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/FakeReal"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:onClick="fakeReal"
+            app:cardBackgroundColor="#60a665"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fake_realandtotaldata"
+                >
+
+
+
+                <TextView
+                    android:id="@+id/textView1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text="Fake Real"
+                    android:layout_centerInParent="true"
+                    android:textAlignment="center"
+                    android:textColor="#f5f3f3"
+
+                    android:textStyle="bold"
+
+                    android:textSize="21sp" />
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

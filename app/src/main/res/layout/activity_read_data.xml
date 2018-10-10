@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Title"
+        android:textAlignment="center"
+        android:paddingTop="10dp"
+
+        android:text="Send Data"
+        android:textColor="#000"
+
+
+        android:textSize="25sp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Title"
+        android:id="@+id/relLayout"
+        >
+
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpDirectory"
+
+            android:text="Back"/>
+
+
+        <Button
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnViewSDCard"
+            android:text="Memory"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:onClick="openHelp"
+
+        android:layout_marginBottom="94dp"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/ic_help_black_24dp"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentRight="true" />
+
+
+    <ListView
+        android:layout_below="@+id/relLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvInternalStorage">
+
+    </ListView>
+</RelativeLayout>
